@@ -2,7 +2,7 @@ import React from "react";
 import { IMG_ROW } from "../../utils/network_address";
 import "./MovieRow.css"
 
-const MovieRow = ({ title, items }) => {
+const MovieRow = ({title, items}) => {
     return (
         <div className="movieRow">
             <h2>{title}</h2>

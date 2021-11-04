@@ -56,14 +56,14 @@ export const getHomeList = async () => {
         },
         {
             slug: "documentary",
-            title: "Documnetários",
+            title: "Documentários",
             items: await basicFetch(`${NETFLIX_DOCUMENTARY}`)
         },
     ]
 }
 
-export const getMviewInfo = async (movieId: string, type: string) => {
-    let info = {};
+export const getMovieInfo = async (movieId: string, type: string) => {
+    let info;
 
     if (movieId) {
         switch (type) {
@@ -73,6 +73,9 @@ export const getMviewInfo = async (movieId: string, type: string) => {
             case "tv":
                 info = await basicFetch(`${SERIE_BY_ID(movieId)}`);
                 break;
+            default: 
+                info = {};
+            break;
         }
     }
 

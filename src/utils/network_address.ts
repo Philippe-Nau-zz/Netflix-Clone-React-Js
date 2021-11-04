@@ -10,4 +10,5 @@ export const NETFLIX_ROMANCE = `/discover/movie?with_genres=10749&language=pt-BR
 export const NETFLIX_DOCUMENTARY = `/discover/movie?with_genres=99&language=pt-BR&api_key=${API_KEY}`;
 export const MOVIE_BY_ID = (movieId: string) => `/movie/${movieId}?language=pt-BR&api_key=${API_KEY}`;
 export const SERIE_BY_ID = (serieId: string) => `/tv/${serieId}?language=pt-BR&api_key=${API_KEY}`;
-export const IMG_ROW = `https://image.tmdb.org/t/p/w300`;
+export const IMG_ROW = 'https://image.tmdb.org/t/p/w300';
+export const IMG_FEATURED =' https://image.tmdb.org/t/p/original';
