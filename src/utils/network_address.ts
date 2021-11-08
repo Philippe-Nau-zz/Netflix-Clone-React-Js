@@ -1,4 +1,4 @@
-export const API_KEY = 'b864df85a849c092abeb6c585a550aa4';
+export const API_KEY = '';
 export const BASE_URL = 'https://api.themoviedb.org/3';
 export const NETFLIX_ORIGINALS = `/discover/tv?with_network=213&language=pt-BR&api_key=${API_KEY}`;
 export const NETFLIX_TRENDING = `/trending/all/week?language=pt-BR&api_key=${API_KEY}`;
