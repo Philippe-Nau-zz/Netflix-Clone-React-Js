@@ -11,4 +11,5 @@ export const NETFLIX_DOCUMENTARY = `/discover/movie?with_genres=99&language=pt-B
 export const MOVIE_BY_ID = (movieId: string) => `/movie/${movieId}?language=pt-BR&api_key=${API_KEY}`;
 export const SERIE_BY_ID = (serieId: string) => `/tv/${serieId}?language=pt-BR&api_key=${API_KEY}`;
 export const IMG_ROW = 'https://image.tmdb.org/t/p/w300';
-export const IMG_FEATURED =' https://image.tmdb.org/t/p/original';
+export const IMG_FEATURED = 'https://image.tmdb.org/t/p/original';
+export const IMG_LOADING = 'https://media.wired.com/photos/592744d3f3e2356fd800bf00/master/w_600,c_limit/Netflix_LoadTime.gif';

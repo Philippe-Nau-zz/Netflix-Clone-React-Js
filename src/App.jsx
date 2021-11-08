@@ -5,6 +5,7 @@ import FeaturedMovie from "./components/FeaturedMovie";
 import Header from "./components/Header"
 
 import "./App.css"
+import { IMG_LOADING } from "./utils/network_address";
 
 // eslint-disable-next-line
 export default () => {
@@ -29,9 +30,9 @@ export default () => {
 
   useEffect(() => {
     const scrollListener = () => {
-      if(window.scrollY > 30){
+      if (window.scrollY > 30) {
         setBlackHeader(true);
-      }else{
+      } else {
         setBlackHeader(false);
       }
     }
@@ -44,10 +45,10 @@ export default () => {
 
   return (
     <div className="page">
-      <Header isBlack={blackHeader}/>
+      <Header isBlack={blackHeader} />
       {
         featuredData &&
-        <FeaturedMovie item={featuredData}/>
+        <FeaturedMovie item={featuredData} />
       }
 
       <section className="list">
@@ -59,10 +60,17 @@ export default () => {
       </section>
 
       <footer>
-        Feito com <span role="img" aria-label="coração">❤️</span> pela B7Web<br/>
-        Direitos de imagem para Netflix<br/>
+        Feito com <span role="img" aria-label="coração">❤️</span> pela B7Web<br />
+        Direitos de imagem para Netflix<br />
         Dados pegos do site themoviedb.org
       </footer>
-    </div>
+
+      {
+        movieList.length <= 0 &&
+        < div className="loading">
+          <img alt="Carregando" src={IMG_LOADING} />
+        </div>
+      }
+    </div >
   );
 }
